@@ -1,252 +1,264 @@
-            html {
-                box-sizing: border-box;
-            }
-            
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            
-            *,
-             ::after,
-             ::before {
-                box-sizing: inherit;
-            }
-            
-            body {
-                margin: 0;
-                padding: 0;
-                background-color: #f5f5f5;
-                font-family: 'Merriweather', serif;
-                font-size: 16px;
-                line-height: 1.6;
-            }
-            /* header */
-            
-            .header {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), URL("../../images/island-hlavicka.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                text-align: center;
-                color: white;
-                padding: 30px;
-            }
-            
-            .title {
-                font-family: 'Raleway', serif;
-                font-size: 60px;
-                padding: 0px 20px 0px 20px;
-            }
-            
-            .autor {
-                padding: 20px;
-                font-style: italic;
-            }
-            
-            .autor::before {
-                content: "!!!!!!!!!!!!!!!!\a";
-                white-space: pre;
-                color: transparent;
-                text-decoration: overline 2px white;
-                text-align: center;
-            }
-            /* main */
-            
-            .main-block {
-                background-color: #ffffff;
-                box-shadow: 0px 5px 15px #a3a3a3;
-            }
-            /* menu */
-            
-            .ul {
-                display: flex;
-                margin: 0px 25px 0px 25px;
-                padding: 25px 0px 25px 0px;
-            }
-            
-            li {
-                text-align: center;
-                font-family: 'Raleway', serif;
-                list-style-type: none;
-                border-bottom: 1px solid #f1f1f1;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            
-            .menu a {
-                color: rgb(209, 208, 208);
-                text-decoration: none;
-                text-transform: uppercase;
-                color: #888888;
-            }
-            /* intro */
-            
-            .intro {
-                padding: 40px 25px 40px 25px;
-            }
-            
-            img {
-                width: 100%;
-            }
-            
-            .photo-txt {
-                text-align: center;
-                color: #888888;
-                text-decoration: none;
-                font-size: 14px;
-                font-family: 'Raleway', serif;
-                padding: 0px 0px 20px 0px !important;
-            }
-            
-            .photo-txt a {
-                text-align: center;
-                color: #888888;
-                text-decoration: underline;
-            }
-            /* main content */
-            
-            .main-content h2 {
-                font-size: 30px;
-                font-family: 'Raleway', serif;
-                padding: 25px;
-            }
-            
-            .main-content h2::after {
-                content: "\a!!!!!!!!!!";
-                text-decoration: underline 5px #629edb;
-                position: relative;
-                left: -30px;
-                white-space: pre;
-                color: transparent;
-            }
-            
-            .main-content p {
-                padding: 25px;
-            }
-            /* gallery */
-            /* footer */
-            
-            .footer {
-                padding: 25px;
-                color: #888888;
-                font-size: 12px;
-            }
-            
-            .footer a {
-                color: #888888;
-            }
-            /* media for tablet */
-            
-            @media (min-width: 600px) {
-                /* menu */
-                ul {
-                    display: flex;
-                    align-items: stretch;
-                    justify-content: space-between;
-                    width: 100%;
-                    margin: 0;
-                    padding: 0;
-                    border-bottom: 1px solid #f1f1f1;
-                    border-top: 1px solid #f1f1f1;
-                }
-                li {
-                    padding: 25px;
-                    border-bottom: none;
-                }
-                /* gallery */
-                .gallery {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: flex-start;
-                    align-content: stretch;
-                }
-                .photo {
-                    width: 50%;
-                    position: relative;
-                    margin-bottom: 0px !important;
-                }
-                .gallery p {
-                    display: none;
-                }
-            }
-            
-            @media (min-width: 1000px) {
-                .header {
-                    padding-top: 100px;
-                    position: static;
-                    height: 600px;
-                }
-                .header p {
-                    padding: 20px 120px 20px 120px;
-                }
-                /* main-block */
-                .main-block {
-                    display: block;
-                    position: relative;
-                    width: 85%;
-                    margin: 0 auto;
-                    margin-top: -70px;
-                }
-                .main-content p {
-                    margin-right: 100px;
-                }
-                /* menu+intro */
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                    align-content: flex-start;
-                    width: 250px;
-                    padding: 40px 0px 0px 25px;
-                    border-bottom: none;
-                }
-                li {
-                    text-align: left;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    border-bottom: 1px solid #f1f1f1;
-                }
-                .top-block {
-                    display: flex;
-                }
-                .intro {
-                    padding: 40px 60px 40px 40px;
-                }
-                /*main */
-                .main-content h2::after {
-                    content: "\a!!!!!!!!!!";
-                    text-decoration: underline 5px #629edb;
-                    position: relative;
-                    left: -25px;
-                    white-space: pre;
-                    color: transparent;
-                }
-                /* gallery */
-                .photo {
-                    width: 33.33%;
-                    position: relative;
-                    margin-bottom: 0px !important;
-                }
-                .gallery p {
-                    font-size: 15px;
-                    display: block;
-                    position: relative;
-                    color: white;
-                    margin-left: 50px;
-                    margin-top: -100px;
-                    visibility: hidden;
-                }
-                .photo {
-                    transition: all 0.2s ease-in;
-                }
-                .photo:hover {
-                    transform: scale(1.05);
-                    -webkit-filter: brightness(50%);
-                }
-                .gallery p:hover {
-                    visibility: visible;
-                }
-                .footer {
-                    padding: 25px 0px 25px 115px;
-                }
-            }
+    html {
+        box-sizing: border-box;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    *,
+     ::after,
+     ::before {
+        box-sizing: inherit;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    /* header */
+    
+    .header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), URL("../../images/island-hlavicka.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        color: white;
+        padding: 30px;
+    }
+    
+    .title {
+        font-family: 'Raleway', serif;
+        font-size: 60px;
+        padding: 0px 20px 0px 20px;
+    }
+    
+    .autor {
+        padding: 20px;
+        font-style: italic;
+    }
+    
+    .autor::before {
+        content: "!!!!!!!!!!!!!!!!\a";
+        white-space: pre;
+        color: transparent;
+        text-decoration: overline 2px white;
+        text-align: center;
+    }
+    /* main */
+    
+    .main-block {
+        background-color: #ffffff;
+        box-shadow: 0px 5px 15px #a3a3a3;
+    }
+    /* menu */
+    
+    .ul {
+        display: flex;
+        margin: 0px 25px 0px 25px;
+        padding: 25px 0px 25px 0px;
+    }
+    
+    li {
+        text-align: center;
+        font-family: 'Raleway', serif;
+        list-style-type: none;
+        border-bottom: 1px solid #f1f1f1;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .menu a {
+        color: rgb(209, 208, 208);
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #888888;
+    }
+    /* intro */
+    
+    .intro {
+        padding: 40px 25px 40px 25px;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    .photo-txt {
+        text-align: center;
+        color: #888888;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: 'Raleway', serif;
+        padding: 0px 0px 20px 0px !important;
+    }
+    
+    .photo-txt a {
+        text-align: center;
+        color: #888888;
+        text-decoration: underline;
+    }
+    /* main content */
+    
+    .main-content h2 {
+        font-size: 30px;
+        font-family: 'Raleway', serif;
+        padding: 25px;
+    }
+    
+    .main-content h2::after {
+        content: "\a!!!!!!!!!!";
+        text-decoration: underline 5px #629edb;
+        position: relative;
+        left: -30px;
+        white-space: pre;
+        color: transparent;
+    }
+    
+    .main-content p {
+        padding: 25px;
+    }
+    /* gallery */
+    /* footer */
+    
+    .footer {
+        padding: 25px;
+        color: #888888;
+        font-size: 12px;
+    }
+    
+    .footer a {
+        color: #888888;
+    }
+    /* media for tablet */
+    
+    @media (min-width: 600px) {
+        /* menu */
+        ul {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid #f1f1f1;
+            border-top: 1px solid #f1f1f1;
+        }
+        li {
+            padding: 25px;
+            border-bottom: none;
+        }
+        /* gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: stretch;
+        }
+        .photo {
+            width: 50%;
+            position: relative;
+            margin-bottom: 0px !important;
+        }
+        .gallery p {
+            display: block;
+            position: relative;
+            font-size: 5px;
+            margin-top: -44px;
+            opacity: 0;
+        }
+    }
+    
+    @media (min-width: 1000px) {
+        .header {
+            padding-top: 100px;
+            position: static;
+            height: 600px;
+        }
+        .header p {
+            padding: 20px 120px 20px 120px;
+        }
+        /* main-block */
+        .main-block {
+            display: block;
+            position: relative;
+            width: 85%;
+            margin: 0 auto;
+            margin-top: -70px;
+        }
+        .main-content p {
+            margin-right: 100px;
+        }
+        /* menu+intro */
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            width: 250px;
+            padding: 40px 0px 0px 25px;
+            border-bottom: none;
+        }
+        li {
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .top-block {
+            display: flex;
+        }
+        .intro {
+            padding: 40px 60px 40px 40px;
+        }
+        /*main */
+        .main-content h2::after {
+            content: "\a!!!!!!!!!!";
+            text-decoration: underline 5px #629edb;
+            position: relative;
+            left: -25px;
+            white-space: pre;
+            color: transparent;
+        }
+        /* gallery */
+        .photo {
+            width: 33.33%;
+            position: relative;
+            margin-bottom: 0px !important;
+            background-color: black;
+        }
+        .gallery p {
+            font-size: 18px;
+            display: block;
+            position: relative;
+            color: white;
+            margin-left: 80px;
+            margin-top: -100px;
+            opacity: 0;
+            transition: all 0.3s ease-in;
+        }
+        .gallery a {
+            color: white;
+        }
+        .photo {
+            transition: all 0.3s ease-in;
+        }
+        .photo:hover .photo-txt {
+            visibility: visible;
+            opacity: 1;
+            -webkit-filter: brightness(100%) !important;
+        }
+        .photo:hover {
+            z-index: 2;
+            transform: scale(1.05);
+            -webkit-filter: brightness(90%);
+        }
+        .footer {
+            padding: 50px 0px 25px 115px;
+        }
+    }
